@@ -1,0 +1,3 @@
+zhqj	obs://backup-nextomics-wh/Sequencing/Nanopore/PCT0020/201907/20190725-NPL1064-P1-PAD64446-barcode/NB08/
+hqdd	obs://backup-nextomics-wh/Sequencing/Nanopore/PCT0020/201907/20190725-NPL1064-P1-PAD64446-barcode/NB07/
+Cm1	obs://backup-nextomics-wh/Sequencing/Nanopore/PCT0020/201907/20190702-NPL1011-P1-PAD62093/
