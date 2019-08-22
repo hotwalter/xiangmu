@@ -1,0 +1,35 @@
+linux crontab
+netstat -tnl 通过邮件发给用户
+systemctl status crond 查看crond 守护文件处于运行状态
+
+cron 任务分为两类
+
+	系统cron任务： 主要用于实现系统自身的维护
+		编辑： /etc/crontab 文件
+	用户cron任务：
+		命令： crontab
+	
+	特定值：
+		给定时间点有效取值范围内的值：
+		
+		* 任意时间点
+	离散取值 ：在时间上使用逗号分隔符分割。0 8 * *  每天的八点执行
+	连续取值： 在时间上使用逗号分隔符。 0 8-10 * * 每天的八点到十点执行（每八点，九点，十点都执行一次）
+	定义步长： 0 */2 *  * 每两小时执行一次     */5 * * * 每五分钟执行一次 
+	crontab -e 
+	0 */2 * * python3 /home/liuy/release.py & >> /dev/null
+	
+程序包管理系统
+	debian: dpt，dpkg,".deb" 结尾
+	redhat: redhat package manager , ".rpm"结尾
+	S.u.S.E: rpm
+	
+	rpm包命名模式：
+	 name-version-release.arch.rpm
+	 redis-3.0.1-2.centos7.x64.rpm
+	前端工具：
+		yum : rhel系列rpm 包管理器的前端工具
+		atp-get(apt-cache): deb 包管理器的前端工具
+		zypper : suse的rpm管理前端工具
+		dnf : Fedora 22 + 系统上rpm包管理的前端工具
+	获取程序包的路径： 
