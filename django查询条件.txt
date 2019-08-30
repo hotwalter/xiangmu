@@ -1,0 +1,39 @@
+django 查询条件
+
+istartswith="sanguo"   #以三国开头，不区分大小写
+startswith = "sanguo    区分大小写
+
+
+反向查询：
+示例：
+
+
+
+
+关于时间的查询条件：
+range(时间段查询)
+  from django.utils.timezone import make_aware
+
+  statrt_time = datetime(year=2019,month=8,day=28,hour=11,minute=11)
+    end_time = datetime(year=2019,month=8,day=30,hour=11,minute=50)
+    books = Book.objects.filter(create_time__range=(statrt_time,end_time))
+
+  时间应标记为aware 类型
+
+    statrt_time = make_aware(datetime(year=2019,month=8,day=28,hour=11,minute=11))
+    end_time = make_aware(datetime(year=2019,month=8,day=30,hour=11,minute=50))
+
+
+__isnull  是否为空
+
+
+
+__regex  正则表达式
+
+book.objects.filter(name__regex=r"^hello")
+__iregex 忽略大小写
+
+
+
+
+
